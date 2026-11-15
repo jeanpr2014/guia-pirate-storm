@@ -12,12 +12,15 @@ window.CONFIG = {
      Enquanto o ID for o de exemplo, o site mostra caixas
      cinzas indicando onde os anúncios vão aparecer. */
   adsense: {
-    client: "ca-pub-XXXXXXXXXXXXXXXX",
+    client: "ca-pub-2475711541177361",
+    /* Cole aqui o número (data-ad-slot) de cada bloco criado no AdSense.
+       Enquanto um slot estiver vazio, aquele espaço fica escondido —
+       e os "Anúncios automáticos" do AdSense podem preencher a página. */
     slots: {
-      topo: "1111111111",       // banner abaixo do menu
-      lateral: "2222222222",    // barra lateral (desktop)
-      conteudo: "3333333333",   // entre seções do conteúdo
-      rodape: "4444444444"      // antes do rodapé
+      topo: "",       // banner abaixo do menu
+      lateral: "",    // barra lateral (desktop)
+      conteudo: "",   // entre seções do conteúdo
+      rodape: ""      // antes do rodapé
     }
   }
 };

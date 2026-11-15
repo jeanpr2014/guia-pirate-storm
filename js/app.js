@@ -316,6 +316,8 @@ function carregarScriptAds(){
   if (scriptAds || !adConfigurado) return;
   scriptAds = true;
   if (consent === "essenciais") (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+  // o index.html já traz o script do AdSense no <head> (exigido para a verificação do site)
+  if (document.querySelector('script[src*="adsbygoogle.js"]')) return;
   const s = document.createElement("script");
   s.async = true; s.crossOrigin = "anonymous";
   s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + encodeURIComponent(AD.client);
@@ -329,6 +331,10 @@ function carregarAnuncios(root){
     if (!adConfigurado) {
       el.classList.add("placeholder");
       el.textContent = T("ad.placeholder", {s: el.dataset.slot});
+      return;
+    }
+    if (!/^\d{6,}$/.test(String(slot || ""))) {   // bloco ainda não criado no AdSense: esconde o espaço
+      el.classList.add("ad-vazio");
       return;
     }
     carregarScriptAds();
