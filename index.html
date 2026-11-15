@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guia Pirate Storm BR — Navios, Canhões, Kits e Eventos</title>
+  <meta name="description" content="Guia completo de Pirate Storm em português, inglês e espanhol: todos os navios com estatísticas, canhões, munições, kits recomendados, deques, battlegrounds, mapas bônus, eventos atualizados e dicas para novatos.">
+  <meta name="keywords" content="Pirate Storm, guia, guide, guía, navios, ships, barcos, canhões, cannons, cañones, eventos, events, Frostbrand, Piranha, Dhuka, kits, deques, decks">
+  <meta property="og:title" content="Guia Pirate Storm BR">
+  <meta property="og:description" content="Navios, canhões, kits e eventos de Pirate Storm em um só lugar.">
+  <meta property="og:type" content="website">
+  <link rel="alternate" hreflang="pt-BR" href="?lang=pt">
+  <link rel="alternate" hreflang="en" href="?lang=en">
+  <link rel="alternate" hreflang="es" href="?lang=es">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚓</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-in">
+      <a class="logo" href="#inicio">⚓ <span data-i18n="logo">Guia Pirate Storm</span> <small data-i18n="logo.tag">BR</small></a>
+      <div class="busca">
+        <input id="busca" type="search" placeholder="Buscar navio, canhão, deque…" aria-label="Buscar" data-i18n-ph="busca.ph" data-i18n-aria="busca.aria">
+        <div id="busca-res" class="busca-res" hidden></div>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Abrir menu" data-i18n-aria="menu.aria">☰</button>
+    </div>
+    <nav class="abas" id="abas">
+      <a href="#inicio" data-aba="inicio" data-i18n="nav.inicio">🏴‍☠️ Início</a>
+      <a href="#navios" data-aba="navios" data-i18n="nav.navios">⛵ Navios</a>
+      <a href="#comparar" data-aba="comparar" data-i18n="nav.comparar">📊 Comparar</a>
+      <a href="#armas" data-aba="armas" data-i18n="nav.armas">💣 Armamento</a>
+      <a href="#kits" data-aba="kits" data-i18n="nav.kits">🧰 Kits & Melhorias</a>      <a href="#battlegrounds" data-aba="battlegrounds" data-i18n="nav.bg">⚔️ Battlegrounds</a>
+      <a href="#bonus" data-aba="bonus" data-i18n="nav.bonus">🏝️ Mapas Bônus</a>
+      <a href="#eventos" data-aba="eventos" data-i18n="nav.eventos">📅 Eventos</a>
+      <a href="#novatos" data-aba="novatos" data-i18n="nav.novatos">🧭 Guia do Novato</a>
+      <a href="#mapa" data-aba="mapa" data-i18n="nav.mapa">🗺️ Mapa & Níveis</a>
+    </nav>
+  </header>
+
+  <div class="ad-wrap"><div class="ad" data-slot="topo" data-format="horizontal"></div></div>
+
+  <div class="layout">
+    <main id="conteudo">
+
+      <!-- INÍCIO -->
+      <section class="aba" id="inicio">
+        <div class="hero">
+          <h1 data-i18n="hero.h1">Bem-vindo, marujo! ☠️</h1>
+          <p data-i18n="hero.p">O guia em português para <strong>Pirate Storm</strong>, o MMO de batalhas navais no navegador. Aqui você encontra todos os navios, quantos canhões cada um carrega, os kits recomendados, melhorias, eventos atualizados e dicas para começar com o pé direito.</p>
+          <div class="hero-btns">
+            <a class="btn" href="#novatos" data-i18n="hero.b1">Sou novato, por onde começo?</a>
+            <a class="btn sec" href="#navios" data-i18n="hero.b2">Ver todos os navios</a>
+          </div>
+        </div>
+        <div class="stats-home" id="stats-home"></div>
+        <h2 data-i18n="home.prox">📅 Próximos eventos</h2>
+        <div id="home-eventos" class="cards"></div>
+        <div class="ad" data-slot="conteudo" data-format="auto"></div>
+        <h2 data-i18n="home.dest">⭐ Navios em destaque</h2>
+        <div id="home-navios" class="cards"></div>
+        <h2 data-i18n="home.oque">📜 O que é Pirate Storm?</h2>
+        <div class="texto" data-i18n="home.texto">
+          <p>Pirate Storm (<em>Death or Glory</em>) é um MMO gratuito de piratas lançado em 2012 pela Bigpoint. Você começa numa pequena Sloop e evolui até grandes fragatas de evento, caçando monstros marinhos com arpões e afundando outros jogadores com canhões.</p>
+          <ul>
+            <li><strong>PvE:</strong> mais de 30 zonas, chefes, missões e mapas bônus.</li>
+            <li><strong>PvP:</strong> mar aberto, temporadas PvP, Arena (1vs1, 2vs2, 3vs3) e Battlegrounds.</li>
+            <li><strong>Guildas:</strong> ilhas de guilda, invasões e rankings mensais.</li>
+            <li><strong>Moedas:</strong> Ouro, Diamantes, Caveiras (PvP), Selos, Águias e tokens de evento.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- NAVIOS -->
+      <section class="aba" id="navios" hidden>
+        <h1 data-i18n="nav.h1">⛵ Todos os Navios</h1>
+        <p class="sub" data-i18n="nav.sub">Clique em um navio para ver detalhes, deque exclusivo e kit recomendado. "—" = dado ainda não confirmado.</p>
+        <div class="filtros" id="filtros-navios"></div>
+        <div id="lista-navios" class="cards"></div>
+      </section>
+
+      <!-- COMPARAR -->
+      <section class="aba" id="comparar" hidden>
+        <h1 data-i18n="comp.h1">📊 Comparador de Navios</h1>
+        <p class="sub" data-i18n="comp.sub">Clique no cabeçalho para ordenar. <strong>Canhões/Arpões</strong> = quantidade base do navio; <strong>máx</strong> = total com o deque próprio e todos os deques e bônus possíveis.</p>
+        <div class="tabela-wrap"><table class="tabela" id="tabela-comp"></table></div>
+        <h2 data-i18n="comp.h2a">🧮 Como se chega ao máximo</h2>
+        <p class="sub" data-i18n="comp.suba">Soma de tudo o que dá para equipar num navio, na ordem das tabelas da comunidade.</p>
+        <div id="composicao"></div>
+        <div class="ad" data-slot="conteudo" data-format="auto"></div>
+        <h2 data-i18n="comp.h2b">📐 Canhões máximos com deques</h2>
+        <p class="sub" data-i18n="comp.subb">Escolha um navio e os deques para calcular o total de canhões e lançadores.</p>
+        <div class="calc" id="calc"></div>
+      </section>
+
+      <!-- ARMAS -->
+      <section class="aba" id="armas" hidden>
+        <h1 data-i18n="arm.h1">💣 Armamento</h1>
+        <p class="sub" data-i18n="arm.sub"><strong>Canhões</strong> acertam navios (PvP e NPCs piratas). <strong>Arpões</strong> acertam monstros marinhos. Dano final = dano do canhão × munição × bônus.</p>
+        <h2 data-i18n="arm.can">Canhões</h2>
+        <div class="tabela-wrap"><table class="tabela" id="tab-canhoes"></table></div>
+        <p class="nota"><span data-i18n="arm.ev">Canhões de evento:</span> <span id="canhoes-evento"></span>.</p>
+        <h2 data-i18n="arm.bal">Munição de canhão</h2>
+        <div class="tabela-wrap"><table class="tabela" id="tab-balas"></table></div>
+        <div class="ad" data-slot="conteudo" data-format="auto"></div>
+        <h2 data-i18n="arm.lanc">Lançadores de arpão</h2>
+        <div class="tabela-wrap"><table class="tabela" id="tab-lanc"></table></div>
+        <h2 data-i18n="arm.arp">Arpões</h2>
+        <div class="tabela-wrap"><table class="tabela" id="tab-arpoes"></table></div>
+        <div class="dica" data-i18n="arm.dica">💡 <strong>Dica:</strong> canhões comprados com ouro podem ser perdidos quando o navio afunda. O <strong>10-Pounder</strong> custa só 150 diamantes, tem o mesmo dano do 9-Pounder e nunca se perde.</div>
+        <h2 data-i18n="arm.of">🔨 Oficina (Workshop)</h2>
+        <div id="oficina"></div>
+      </section>
+
+      <!-- KITS -->
+      <section class="aba" id="kits" hidden>
+        <h1 data-i18n="kit.h1">🧰 Kits & Melhorias</h1>
+        <p class="sub" data-i18n="kit.sub">O que equipar no seu navio em cada fase do jogo, e o que cada melhoria faz.</p>
+        <h2 data-i18n="kit.fase">Kits recomendados por fase</h2>
+        <div id="kits-fase" class="cards"></div>
+        <div class="ad" data-slot="conteudo" data-format="auto"></div>
+        <h2 data-i18n="kit.melh">Melhorias do Mercador</h2>
+        <div id="melhorias"></div>
+        <h2 data-i18n="kit.deq">Deques (canhões e lançadores extras)</h2>
+        <p class="sub" data-i18n="kit.deqsub">Cada navio aceita um deque de cada seção. <span class="tag ok">Inafundável</span> não se perde ao afundar; <span class="tag warn">Afundável</span> pode ser perdido.</p>
+        <div class="tabela-wrap"><table class="tabela" id="tab-deques"></table></div>
+      </section>
+
+      <!-- BATTLEGROUNDS -->
+      <section class="aba" id="battlegrounds" hidden>
+        <h1 data-i18n="bg.h1">⚔️ Battlegrounds (Casas Piratas)</h1>
+        <p class="sub" data-i18n="bg.sub">Cada uma das 7 casas piratas organiza um modo de batalha. Vença partidas para ganhar <strong>moedas da casa</strong> e use-as para liberar navios, deques, canhões, munições e buffs. No fim da semana, a moeda que faltar pode ser comprada com diamantes (cerca de 2.000 💎 cada).</p>
+        <div class="filtros" id="filtros-bg"></div>
+        <div id="bg-lista"></div>
+        <div class="ad" data-slot="conteudo" data-format="auto"></div>
+        <h2 data-i18n="bg.set">🦅 Set Might of the Eagle</h2>
+        <div id="set-aguia"></div>
+        <h2 data-i18n="bg.deq">🛠️ Deques dos battlegrounds</h2>
+        <p class="sub" data-i18n="bg.deqsub">Todos são <span class="tag ok">Inafundáveis</span> e servem em qualquer navio que tenha a seção correspondente.</p>
+        <div class="tabela-wrap"><table class="tabela" id="tab-bg-deques"></table></div>
+      </section>
+
+      <!-- MAPAS BÔNUS -->
+      <section class="aba" id="bonus" hidden>
+        <h1 data-i18n="mb.h1">🏝️ Mapas Bônus</h1>
+        <p class="sub" data-i18n="mb.sub">Os 4 mapas bônus padrão do jogo, com todas as ondas de NPCs: quantidade, HP, dano, XP e ouro por inimigo.</p>
+        <div class="dica" id="bonus-info"></div>
+        <div class="filtros" id="filtros-bonus"></div>
+        <div id="bonus-mapa"></div>
+        <div class="ad" data-slot="conteudo" data-format="auto"></div>
+        <h2 data-i18n="mb.comp">📊 Comparativo dos mapas</h2>
+        <div class="tabela-wrap"><table class="tabela" id="tab-bonus-comp"></table></div>
+      </section>
+
+      <!-- EVENTOS -->
+      <section class="aba" id="eventos" hidden>
+        <h1 data-i18n="ev.h1">📅 Eventos</h1>
+        <div class="info-att" id="info-att"></div>
+        <h2 data-i18n="ev.tl">🗓️ Linha do tempo — próximos 12 meses</h2>
+        <p class="sub" data-i18n="ev.tlsub">Quando cada evento deve acontecer, com base nas datas de 2026. <span class="tag ok">Confirmado</span> segue o anúncio oficial; os outros são <span class="tag warn">Estimativa</span> e podem mudar. Passe o mouse ou toque numa barra para ver os detalhes.</p>
+        <div class="tl-filtros filtros" id="tl-filtros"></div>
+        <div id="timeline" class="timeline"></div>
+        <div id="tl-lista" class="tl-lista"></div>
+        <h2 data-i18n="ev.prox">⏳ Próximos e em andamento</h2>
+        <div id="ev-datados" class="cards"></div>
+        <h2 data-i18n="ev.anun">📣 Últimos anúncios oficiais</h2>
+        <p class="sub" data-i18n="ev.anunsub">Puxados automaticamente do fórum oficial (em inglês). Clique para ler o anúncio completo.</p>
+        <div id="ev-feed" class="feed"></div>
+        <div class="ad" data-slot="conteudo" data-format="auto"></div>
+        <h2 data-i18n="ev.guia">📖 Guia de cada evento</h2>
+        <p class="sub" data-i18n="ev.guiasub">Clique num evento para ver as atividades, os mapas, os itens e os kits que ele traz. Semanas de battleground estão na aba <a href="#battlegrounds">Battlegrounds</a>.</p>
+        <div id="ev-guia" class="ev-guia"></div>
+        <h2 data-i18n="ev.cal">🗓️ Resumo do calendário</h2>
+        <div id="ev-calendario" class="cards"></div>
+      </section>
+
+      <!-- NOVATOS -->
+      <section class="aba" id="novatos" hidden>
+        <h1 data-i18n="nov.h1">🧭 Guia do Novato</h1>
+        <div class="passos">
+          <div class="passo"><b>1</b><div data-i18n="nov.p1"><h3>Faça as missões iniciais</h3><p>Elas dão itens e cerca de <strong>30.000 diamantes</strong>. <strong>Guarde esses diamantes!</strong> Não gaste em coisas pequenas.</p></div></div>
+          <div class="passo"><b>2</b><div data-i18n="nov.p2"><h3>Compre melhorias de ouro primeiro</h3><p>Nos navios iniciais, prefira as versões em ouro: Simple Bulkhead, Simple Keel, Andarta, Improvised Anchor e Rugged Linen Sails.</p></div></div>
+          <div class="passo"><b>3</b><div data-i18n="nov.p3"><h3>Junte ouro para a War Brigantine</h3><p>Custa 1.000.000 de ouro e dobra seus slots de canhão em relação ao Brigantine (30 contra 20).</p></div></div>
+          <div class="passo"><b>4</b><div data-i18n="nov.p4"><h3>Troque para 10-Pounders</h3><p>150 diamantes cada, mesmo dano do 9-Pounder e <strong>não se perdem</strong> ao afundar.</p></div></div>
+          <div class="passo"><b>5</b><div data-i18n="nov.p5"><h3>Libere a Dhuka</h3><p>Faça as missões do Imediato em Oasia (z8B) e Gusty Cliffs (z11). Ela custa só 3 milhões de ouro, um ótimo navio intermediário.</p></div></div>
+          <div class="passo"><b>6</b><div data-i18n="nov.p6"><h3>Entre no PvP para a Piranha</h3><p>Suba a patente PvP até Ensign e compre a Piranha por 500 caveiras: 55 canhões e 9.750 de HP.</p></div></div>
+          <div class="passo"><b>7</b><div data-i18n="nov.p7"><h3>Use bem os Selos</h3><p>Você ganha 1 selo por nível (premium ganha 1 por dia). Primeira meta: o <strong>Perforator</strong> na página 3 do Scroll of Power, que aumenta o dano de canhão.</p></div></div>
+          <div class="passo"><b>8</b><div data-i18n="nov.p8"><h3>Fragatas: espere o leilão</h3><p>Frigate e Large Frigate aparecem no leilão diário de ouro. <strong>Não compre com diamantes.</strong></p></div></div>
+          <div class="passo"><b>9</b><div data-i18n="nov.p9"><h3>Participe dos eventos</h3><p>Os navios de evento são os mais fortes do jogo. O <strong>Frostbrand</strong> (inverno) sai por ouro.</p></div></div>
+        </div>
+        <div class="ad" data-slot="conteudo" data-format="auto"></div>
+        <h2 data-i18n="nov.faq">❓ Perguntas frequentes</h2>
+        <details data-i18n="nov.q1"><summary>Qual a diferença entre canhão e arpão?</summary><p>Canhões causam dano a navios (jogadores e piratas NPC). Arpões causam dano a monstros marinhos. Equipe os dois conforme a zona.</p></details>
+        <details data-i18n="nov.q2"><summary>O que acontece quando meu navio afunda?</summary><p>Você pode perder canhões e lançadores comprados com ouro e deques "afundáveis". Itens de diamante e deques inafundáveis ficam.</p></details>
+        <details data-i18n="nov.q3"><summary>O que são Caveiras?</summary><p>Moeda do PvP. Você ganha ao afundar jogadores e perde uma parte ao ser afundado. Servem para comprar navios Warmaster e itens de temporada.</p></details>
+        <details data-i18n="nov.q4"><summary>Como funciona a temporada PvP?</summary><p>Dura cerca de 3 meses. Todos participam automaticamente. Ficar inativo reduz seus pontos, mas não suas caveiras. A Proteção PvP (7 ou 14 dias) evita essa perda.</p></details>
+        <details data-i18n="nov.q5"><summary>Onde é melhor farmar?</summary><p>Zonas de nível mais alto dão mais ouro e diamantes. Cada zona favorece certos itens ou moedas. Use a Âncora para ganhar +5% ou +10% de ouro.</p></details>
+        <details data-i18n="nov.q6"><summary>Preciso de Flash?</summary><p>Não. Desde 2020 o jogo usa um cliente próprio (Pirate Storm Client), baixado no site oficial.</p></details>
+      </section>
+
+      <!-- MAPA -->
+      <section class="aba" id="mapa" hidden>
+        <h1 data-i18n="map.h1">🗺️ Mapa & Níveis</h1>
+        <h2 data-i18n="map.zonas">Zonas e chefes</h2>
+        <div class="tabela-wrap"><table class="tabela" id="tab-zonas"></table></div>
+        <div class="ad" data-slot="conteudo" data-format="auto"></div>
+        <h2 data-i18n="map.xp">Experiência por nível</h2>
+        <div class="tabela-wrap"><table class="tabela" id="tab-niveis"></table></div>
+      </section>
+    </main>
+
+    <aside class="lateral">
+      <div class="box" data-i18n="lat.rapido">
+        <h3>⚓ Acesso rápido</h3>
+        <a href="#novatos">Guia do Novato</a>
+        <a href="#comparar">Comparar navios</a>
+        <a href="#kits">Kits recomendados</a>        <a href="#eventos">Eventos da semana</a>
+        <a href="#battlegrounds">Battlegrounds</a>
+        <a href="#bonus">Mapas bônus</a>
+      </div>
+      <div class="ad ad-lateral" data-slot="lateral" data-format="vertical"></div>
+      <div class="box" data-i18n="lat.links">
+        <h3>🔗 Links oficiais</h3>
+        <a href="https://www.piratestorm.com" target="_blank" rel="noopener">Site oficial do jogo</a>
+        <a href="https://board-en.piratestorm.com/" target="_blank" rel="noopener">Fórum oficial</a>
+      </div>
+    </aside>
+  </div>
+
+  <div class="ad-wrap"><div class="ad" data-slot="rodape" data-format="horizontal"></div></div>
+
+  <footer class="rodape">
+    <p data-i18n="rod.p"><strong>Guia Pirate Storm BR</strong> é um site de fãs, sem vínculo com a Bigpoint. Pirate Storm é marca registrada de seus respectivos donos. Dados compilados da wiki da comunidade e do fórum oficial; valores podem mudar no jogo.</p>
+    <p><a href="privacidade.html" data-i18n="rod.priv">Política de Privacidade</a> · <a href="#" id="cookies-reabrir" data-i18n="rod.ck">Preferências de cookies</a></p>
+  </footer>
+
+  <div id="modal" class="modal" hidden><div class="modal-in"><button class="fechar" aria-label="Fechar" data-i18n-aria="fechar">✕</button><div id="modal-corpo"></div></div></div>
+
+  <div id="cookie" class="cookie" hidden>
+    <p data-i18n="ck.p">Usamos cookies para exibir anúncios (Google AdSense) e melhorar sua experiência. <a href="privacidade.html">Saiba mais</a>.</p>
+    <div><button id="ck-aceitar" class="btn" data-i18n="ck.ok">Aceitar</button><button id="ck-recusar" class="btn sec" data-i18n="ck.no">Só essenciais</button></div>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/dados-extra.js"></script>  <script src="js/eventos.js"></script>
+  <script src="js/lang/pt.js"></script>
+  <script src="js/lang/en.js"></script>
+  <script src="js/lang/es.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

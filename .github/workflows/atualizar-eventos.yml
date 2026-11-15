@@ -1,0 +1,31 @@
+# Atualiza os eventos do site automaticamente a cada 6 horas
+# (funciona quando o site está hospedado no GitHub Pages).
+name: Atualizar eventos
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:   # permite rodar manualmente pela aba Actions
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Buscar anúncios do fórum oficial
+        shell: pwsh
+        run: ./scripts/atualizar-eventos.ps1
+      - name: Salvar se houve mudança
+        run: |
+          git config user.name "atualizador-eventos"
+          git config user.email "actions@users.noreply.github.com"
+          git add js/eventos.js
+          if git diff --cached --quiet; then
+            echo "Sem novidades."
+          else
+            git commit -m "Atualiza eventos automaticamente"
+            git push
+          fi

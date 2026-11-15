@@ -1,0 +1,4 @@
+# Configurações locais do editor/assistente (não vão para o site)
+.claude/
+Thumbs.db
+desktop.ini
