@@ -1,5 +1,5 @@
 /* Arquivo gerado automaticamente por scripts/atualizar-eventos.ps1 - nao edite a mao. */
-window.EVENTOS_ATUALIZADO = "2026-11-16T04:00:39Z";
+window.EVENTOS_ATUALIZADO = "2026-11-16T14:23:09Z";
 window.EVENTOS_FEED = [
   {
     "titulo": "Winter Event - Attack of the Frostwolves - 2026",
