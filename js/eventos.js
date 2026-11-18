@@ -1,6 +1,12 @@
 /* Arquivo gerado automaticamente por scripts/atualizar-eventos.ps1 - nao edite a mao. */
-window.EVENTOS_ATUALIZADO = "2026-11-17T15:16:57Z";
+window.EVENTOS_ATUALIZADO = "2026-11-18T00:17:32Z";
 window.EVENTOS_FEED = [
+  {
+    "titulo": "Maintenance - November 17th",
+    "link": "https://board-en.piratestorm.com/threads/maintenance-november-17th.28147/",
+    "data": "2026-11-17T19:00:53Z",
+    "resumo": "Ahoy Pirates, The Forum Team has been informed that there is currently a maintenance of Pirate Storm in progress. We have been informed that the maintencance may take some time. It appears that some servers are coming back online and offline with this process.…"
+  },
   {
     "titulo": "Winter Event - Attack of the Frostwolves - 2026",
     "link": "https://board-en.piratestorm.com/threads/winter-event-attack-of-the-frostwolves-2026.28142/",
@@ -84,12 +90,6 @@ window.EVENTOS_FEED = [
     "link": "https://board-en.piratestorm.com/threads/celebration-of-heroes-pirate-storm-birthday.28071/",
     "data": "2026-07-09T14:20:15Z",
     "resumo": "Ahoy Pirates! Between August 1 and August 3, Pirate Storm will be celebrating a birthday: its own! To commemorate the occasion, we've put together an exciting series of challenges to encourage you to let your inner pirates really run rampant! This includes two…"
-  },
-  {
-    "titulo": "Battleground Week - Kingsguard - July 20",
-    "link": "https://board-en.piratestorm.com/threads/battleground-week-kingsguard-july-20.28070/",
-    "data": "2026-07-09T12:52:21Z",
-    "resumo": "Ahoy Pirates, The Kingsguard Battlefield has been scheduled to start on Monday, 2026-07-20. · (Playable) Event Start: 2026-07-20 (Monday) 12:00:00 local server time · (Playable) Event End: 2026-07-27 (Monday) 11:59:59 local server time · Medals in Payment: 202…"
   }
 ];
 window.EVENTOS_AUTO = [
