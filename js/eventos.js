@@ -1,5 +1,5 @@
 /* Arquivo gerado automaticamente por scripts/atualizar-eventos.ps1 - nao edite a mao. */
-window.EVENTOS_ATUALIZADO = "2026-11-18T00:17:32Z";
+window.EVENTOS_ATUALIZADO = "2026-11-18T14:53:13Z";
 window.EVENTOS_FEED = [
   {
     "titulo": "Maintenance - November 17th",
