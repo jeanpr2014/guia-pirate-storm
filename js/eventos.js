@@ -1,6 +1,12 @@
 /* Arquivo gerado automaticamente por scripts/atualizar-eventos.ps1 - nao edite a mao. */
-window.EVENTOS_ATUALIZADO = "2026-11-23T04:57:07Z";
+window.EVENTOS_ATUALIZADO = "2026-11-23T16:57:21Z";
 window.EVENTOS_FEED = [
+  {
+    "titulo": "Battleground Week December 7: Pirate's Dominion",
+    "link": "https://board-en.piratestorm.com/threads/battleground-week-december-7-pirates-dominion.28143/",
+    "data": "2026-11-23T13:00:44Z",
+    "resumo": "Ahoy Pirates! The next battle ground week will start on Monday: Pirate's Dominion · (Playable) Event Start: 2026-12-07 (Monday) 12:00:00 local server time · (Playable) Event End: 2026-12-14 (Monday) 11:59:59 local server time · Medals in Payment: 2026-12-07 (M…"
+  },
   {
     "titulo": "Maintenance - November 17th",
     "link": "https://board-en.piratestorm.com/threads/maintenance-november-17th.28147/",
@@ -84,15 +90,16 @@ window.EVENTOS_FEED = [
     "link": "https://board-en.piratestorm.com/threads/pvp-season1-all-servers.28072/",
     "data": "2026-07-09T14:34:38Z",
     "resumo": "Ahoy Pirates, An attempt to re-do PVP Season 1 has been scheduled for ALL Servers . Begin Date: 2026-08-09 00:00:00 (local server time) ​ While the season is active you can earn points to unlock new insignias and rank titles, you also unlock items while procee…"
-  },
-  {
-    "titulo": "Celebration of Heroes (Pirate Storm Birthday)",
-    "link": "https://board-en.piratestorm.com/threads/celebration-of-heroes-pirate-storm-birthday.28071/",
-    "data": "2026-07-09T14:20:15Z",
-    "resumo": "Ahoy Pirates! Between August 1 and August 3, Pirate Storm will be celebrating a birthday: its own! To commemorate the occasion, we've put together an exciting series of challenges to encourage you to let your inner pirates really run rampant! This includes two…"
   }
 ];
 window.EVENTOS_AUTO = [
+  {
+    "nome": "Battleground Week December 7: Pirate's Dominion",
+    "inicio": "2026-12-07T12:00:00",
+    "fim": "2026-12-14T11:59:59",
+    "desc": "Datas no horario do servidor. Veja o anuncio oficial para regras e recompensas.",
+    "link": "https://board-en.piratestorm.com/threads/battleground-week-december-7-pirates-dominion.28143/"
+  },
   {
     "nome": "Capture the Flag",
     "inicio": "2026-11-16T12:00:00",
@@ -155,12 +162,5 @@ window.EVENTOS_AUTO = [
     "fim": "2026-07-27T11:59:59",
     "desc": "Datas no horario do servidor. Veja o anuncio oficial para regras e recompensas.",
     "link": "https://board-en.piratestorm.com/threads/battleground-week-kingsguard-july-20.28070/"
-  },
-  {
-    "nome": "Battleground Week - Kingsguard - May 4",
-    "inicio": "2026-05-04T12:00:00",
-    "fim": "2026-05-11T11:59:59",
-    "desc": "Datas no horario do servidor. Veja o anuncio oficial para regras e recompensas.",
-    "link": "https://board-en.piratestorm.com/threads/battleground-week-kingsguard-may-4.28043/"
   }
 ];
