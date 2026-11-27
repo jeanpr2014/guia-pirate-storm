@@ -1,5 +1,5 @@
 /* Arquivo gerado automaticamente por scripts/atualizar-eventos.ps1 - nao edite a mao. */
-window.EVENTOS_ATUALIZADO = "2026-11-26T16:06:18Z";
+window.EVENTOS_ATUALIZADO = "2026-11-27T01:21:15Z";
 window.EVENTOS_FEED = [
   {
     "titulo": "Battleground Week December 7: Pirate's Dominion",
